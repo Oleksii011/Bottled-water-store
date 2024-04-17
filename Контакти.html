@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Контакти - Магазин бутильованої води</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: #f4f4f4;
+        }
+
+        header,
+        footer {
+            background: #007BFF;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1,
+        h2 {
+            margin: 0;
+        }
+
+        nav {
+            background: #006BDD;
+            padding: 10px 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            display: inline-block;
+        }
+
+        .content {
+            padding: 20px;
+            background: #fff;
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        form {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+
+        footer {
+            font-size: 0.8em;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Магазин бутильованої води</h1>
+    </header>
+    <nav>
+        <a href="Головна.html">Головна</a>
+        <a href="Продукти.html">Продукти</a>
+        <a href="Контакти.html">Контакти</a>
+        <a href="Кошик.html">Кошик</a>
+        <a href="Login.html">Увійти/Реєстрація</a>
+        <a href="Subscriptions.html">Підписки</a>
+    </nav>
+    <div class="content">
+        <h2>Контакти</h2>
+        <div class="contact-info">
+            <p>Телефонуйте нам за номером: +380 123 456 789</p>
+            <p>Email: info@yourwaterstore.com</p>
+            <p>Адреса: вул. Головна, 123, Київ, Україна</p>
+        </div>
+        <form action="submit_form.php" method="post">
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Повідомлення:</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <button type="submit">Відправити</button>
+        </form>
+    </div>
+    <footer>
+        <p class="footer">© 2024 Магазин бутильованої води</p>
+    </footer>
+</body>
+
+</html>

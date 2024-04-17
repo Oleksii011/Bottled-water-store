@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Магазин бутильованої води</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: #f4f4f4;
+        }
+
+        header,
+        footer {
+            background: #007BFF;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1,
+        h2 {
+            margin: 0;
+        }
+
+        nav {
+            background: #006BDD;
+            padding: 10px 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            display: inline-block;
+        }
+
+        .content {
+            padding: 20px;
+            background: #fff;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product img {
+            width: 100px;
+            height: auto;
+        }
+
+        button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+
+        footer {
+            font-size: 0.8em;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Магазин бутильованої води</h1>
+    </header>
+    <nav>
+        <a href="Головна.html">Головна</a>
+        <a href="Продукти.html">Продукти</a>
+        <a href="Контакти.html">Контакти</a>
+        <a href="Кошик.html">Кошик</a>
+        <a href="Login.html">Увійти/Реєстрація</a>
+        <a href="Subscriptions.html">Підписки</a>
+    </nav>
+    <div class="content">
+        <section id="home">
+            <h2>Ласкаво просимо до нашого магазину води!</h2>
+            <p>Ми пропонуємо високоякісну бутильовану воду, яка забезпечить вас і вашу родину чистою і свіжою водою.</p>
+            <button onclick="buyNow()">Купити зараз</button>
+        </section>
+        <section id="products">
+            <h2>Наша продукція</h2>
+            <div class="product">
+                <img src="https://via.placeholder.com/100x150" alt="Бутильована вода">
+                <h3>Мінеральна вода</h3>
+                <p>Опис мінеральної води. Ідеальна для щоденного споживання.</p>
+                <button onclick="addToCart('Мінеральна вода')">Додати у кошик</button>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Контакти</h2>
+            <p>Телефонуйте нам за номером: +380 123 456 789</p>
+            <p>Email: info@yourwaterstore.com</p>
+        </section>
+    </div>
+    <footer>
+        <p class="footer">© 2024 Магазин бутильованої води</p>
+    </footer>
+    <script>
+        if (!localStorage.getItem('cart')) {
+            localStorage.setItem('cart', JSON.stringify([]));
+        }
+
+        function addToCart(productName) {
+            let cart = JSON.parse(localStorage.getItem('cart'));
+            cart.push(productName);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(productName + ' додано до кошика!');
+        }
+
+        function buyNow() {
+            location.href = 'checkout.html';
+        }
+    </script>
+
+</body>
+
+</html>

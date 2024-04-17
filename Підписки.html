@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Магазин бутильованої води - Підписки</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            /* Ensure the page takes minimum full height of the window */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: #f4f4f4;
+        }
+
+        header,
+        footer {
+            background: #007BFF;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin: 0;
+        }
+
+        nav {
+            background: #006BDD;
+            padding: 10px 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            display: inline-block;
+        }
+
+        .content {
+            padding: 20px;
+            background: #fff;
+            min-height: calc(100% - 164px);
+            /* Adjusting content height */
+        }
+
+        button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+
+        footer {
+            font-size: 0.8em;
+            position: fixed;
+            /* Fix position to bottom */
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* Align to the bottom */
+        }
+
+        .subscription-form {
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="email"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Магазин бутильованої води</h1>
+    </header>
+    <nav>
+        <a href="Головна.html">Головна</a>
+        <a href="Продукти.html">Продукти</a>
+        <a href="Контакти.html">Контакти</a>
+        <a href="Кошик.html">Кошик</a>
+        <a href="Login.html">Увійти/Реєстрація</a>
+        <a href="Subscriptions.html">Підписки</a>
+    </nav>
+    <div class="content">
+        <div class="subscription-form">
+            <h3>Підписатися на новини</h3>
+            <input type="email" placeholder="Введіть ваш Email">
+            <button onclick="subscribe()">Підписатися</button>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 Магазин бутильованої води</p>
+    </footer>
+    <script>
+        function subscribe() {
+            const emailInput = document.querySelector('.subscription-form input[type="email"]');
+            if (emailInput.value) {
+                alert('Дякуємо за підписку! Ви будете отримувати новини на ' + emailInput.value);
+                emailInput.value = ''; // Clear the input after sending.
+            } else {
+                alert('Будь ласка, введіть Email!');
+            }
+        }
+    </script>
+</body>
+
+</html>

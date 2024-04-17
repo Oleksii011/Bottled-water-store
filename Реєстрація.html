@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Магазин бутильованої води</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            /* Ensure the page takes minimum full height of the window */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: #f4f4f4;
+        }
+
+        header,
+        footer {
+            background: #007BFF;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin: 0;
+        }
+
+        nav {
+            background: #006BDD;
+            padding: 10px 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            display: inline-block;
+        }
+
+        .content {
+            padding: 20px;
+            background: #fff;
+            min-height: calc(100% - 164px);
+            /* Adjusting content height */
+        }
+
+        button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+
+        footer {
+            font-size: 0.8em;
+            position: fixed;
+            /* Fix position to bottom */
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* Align to the bottom */
+        }
+
+        .form-container {
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .toggle-forms {
+            text-align: center;
+            margin-top: 20px;
+            color: #007bff;
+            cursor: pointer;
+        }
+
+        .toggle-forms:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Магазин бутильованої води</h1>
+    </header>
+    <nav>
+        <a href="Головна.html">Головна</a>
+        <a href="Продукти.html">Продукти</a>
+        <a href="Контакти.html">Контакти</a>
+        <a href="Кошик.html">Кошик</a>
+        <a href="Login.html">Увійти/Реєстрація</a>
+        <a href="Subscriptions.html">Підписки</a>
+    </nav>
+    <div class="content">
+        <div class="form-container" id="login-form">
+            <h3>Увійти</h3>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Пароль">
+            <button onclick="alert('Ласкаво просимо!')">Увійти</button>
+            <div class="toggle-forms" onclick="showRegister()">Не маєте акаунту? Реєстрація</div>
+        </div>
+        <div class="form-container" id="register-form" style="display: none;">
+            <h3>Реєстрація</h3>
+            <input type="text" placeholder="Ім'я">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Пароль">
+            <button onclick="alert('Реєстрація успішна!')">Зареєструватися</button>
+            <div class="toggle-forms" onclick="showLogin()">Вже маєте акаунт? Увійти</div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 Магазин бутильованої води</p>
+    </footer>
+    <script>
+        function showRegister() {
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('register-form').style.display = 'block';
+        }
+        function showLogin() {
+            document.getElementById('register-form').style.display = 'none';
+            document.getElementById('login-form').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
